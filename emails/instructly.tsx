@@ -12,8 +12,17 @@ import {
   Font,
 } from "@react-email/components";
 
-const baseUrl =
-  "https://firebasestorage.googleapis.com/v0/b/instructai-server-e8aa9.appspot.com/o/";
+const baseUrl = process.env.isLocal
+  ? "/static"
+  : "https://firebasestorage.googleapis.com/v0/b/instructai-server-e8aa9.appspot.com/o";
+
+const getImageSrc = (imageName) => {
+  if (process.env.isLocal) {
+    return `${baseUrl}/${imageName}`;
+  } else {
+    return `${baseUrl}/${imageName}?alt=media`;
+  }
+};
 
 const ResponsiveEmail = () => {
   return (
@@ -49,7 +58,7 @@ const ResponsiveEmail = () => {
           <Container className="border border-solid border-gray-200 rounded mx-auto w-full max-w-xl bg-white">
             <Section className="bg-primary h-36">
               <Img
-                src={`${baseUrl}/static/logo.png${`?alt=media`}`}
+                src={getImageSrc("logo.png")}
                 width="320"
                 height="auto"
                 alt="instructly logo"
@@ -60,7 +69,7 @@ const ResponsiveEmail = () => {
               <Container className="text-center flex flex-col justify-start items-center pt-6 w-full">
                 <Container className="w-full flex flex-row justify-center pb-4">
                   <Img
-                    src={`${baseUrl}/static/1.png${`?alt=media`}`}
+                    src={getImageSrc("1.png")}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app showing many lessons plannes for the week"
@@ -87,7 +96,7 @@ const ResponsiveEmail = () => {
                     className="mx-2"
                   >
                     <Img
-                      src={`${baseUrl}/static/app-store.png${`?alt=media`}`}
+                      src={getImageSrc("app-store.png")}
                       width="200"
                       height="auto"
                       alt="Download on App Store"
@@ -98,7 +107,7 @@ const ResponsiveEmail = () => {
                     className="mx-2"
                   >
                     <Img
-                      src={`${baseUrl}/static/google-play.png${`?alt=media`}`}
+                      src={getImageSrc("google-play.png")}
                       width="200"
                       height="auto"
                       alt="Get it on Google Play"
@@ -118,7 +127,7 @@ const ResponsiveEmail = () => {
               <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
                 <Container className="flex flex-col w-full justify-start items-center">
                   <Img
-                    src={`${baseUrl}/static/2.png${`?alt=media`}`}
+                    src={getImageSrc("2.png")}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app showing a students profile, payments and lessons"
@@ -133,7 +142,7 @@ const ResponsiveEmail = () => {
               <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
                 <Container className="flex flex-col w-full justify-start items-center">
                   <Img
-                    src={`${baseUrl}/static/3.png${`?alt=media`}`}
+                    src={getImageSrc("3.png")}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app showing option to export payments and expenses"
@@ -148,7 +157,7 @@ const ResponsiveEmail = () => {
               <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
                 <Container className="flex flex-col w-full justify-start items-center">
                   <Img
-                    src={`${baseUrl}/static/4.png${`?alt=media`}`}
+                    src={getImageSrc("4.png")}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app options to add a lesson"
@@ -167,7 +176,7 @@ const ResponsiveEmail = () => {
                 <Container className="w-full flex flex-col justify-center items-center">
                   <Link href="https://www.facebook.com/instructlyapp">
                     <Img
-                      src={`${baseUrl}/static/facebook.png${`?alt=media`}`}
+                      src={getImageSrc("facebook.png")}
                       width="130"
                       height="auto"
                       alt="link to the instructly facebook"
@@ -176,17 +185,18 @@ const ResponsiveEmail = () => {
                 </Container>
               </Container>
               <Container className="w-full bg-primary flex flex-col justify-center items-center mt-4 py-6 px-4">
-                <Text className="text-4xl font-bold text-white">
+                <Text className="text-4xl font-bold text-white pb-4">
                   Any Questions?
                 </Text>
-                <Text
-                  style={{
-                    textDecoration: "none",
-                  }}
-                  className="text-2xl font-medium text-white"
-                >
-                  Drop us an email: instructlyapp@gmail.com
+                <Text className="text-2xl font-light text-white">
+                  Drop us an email:
                 </Text>
+                <a
+                  href="mailto:instructlyapp@gmail.com"
+                  className="text-2xl font-medium text-white no-underline hover:underline"
+                >
+                  instructlyapp@gmail.com
+                </a>
               </Container>
             </Section>
           </Container>
