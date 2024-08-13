@@ -77,16 +77,16 @@ const ResponsiveEmail = () => {
                   />
                 </Container>
                 <Container className="px-4 py-4">
-                  <Text className="text-xl font-semibold">
+                  <Text className="text-xl font-semibold text-black">
                     🚗 Lessons, students, payments & expenses
                   </Text>
-                  <Text className="text-xl font-semibold">
+                  <Text className="text-xl font-semibold text-black">
                     🗣️ Easily share notes with students
                   </Text>
-                  <Text className="text-xl font-semibold">
+                  <Text className="text-xl font-semibold text-black">
                     📅 Schedule lessons, integrated with your calendar
                   </Text>
-                  <Text className="text-xl font-semibold">
+                  <Text className="text-xl font-semibold text-black">
                     💰 Track payments on-time with Stripe
                   </Text>
                 </Container>
