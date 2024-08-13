@@ -61,11 +61,11 @@ const ResponsiveEmail = () => {
               <Container className="text-center flex flex-col justify-start items-center pt-6 w-full">
                 <Container className="w-full flex flex-row justify-center pb-4">
                   <Img
-                    src={`${baseUrl}/static/img1.png`}
+                    src={`${baseUrl}/static/1.png`}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app showing many lessons plannes for the week"
-                    className="rotate-6"
+                    className="rotate-6 mt-2"
                   />
                 </Container>
                 <Container className="px-4 py-4">
@@ -80,11 +80,6 @@ const ResponsiveEmail = () => {
                   </Text>
                   <Text className="text-xl font-semibold">
                     💰 Track payments on-time with Stripe
-                  </Text>
-                </Container>
-                <Container className="w-full bg-primary flex flex-col justify-center items-center mb-4">
-                  <Text className="text-4xl font-bold text-white py-2">
-                    Download Free Today!
                   </Text>
                 </Container>
                 <Container className="flex flex-col justify-start items-center">
@@ -111,57 +106,81 @@ const ResponsiveEmail = () => {
                     />
                   </Link>
                 </Container>
+                <Container className="w-full bg-primary flex flex-col justify-center items-center mt-4">
+                  <Text className="text-4xl font-bold text-white py-2 text-center">
+                    Download Free Today!
+                  </Text>
+                </Container>
               </Container>
             </Section>
-
-            <Section className="mt-8">
-              <Text className="text-xl font-bold text-center text-gray-800">
-                Control your Home Lighting
-              </Text>
-              <Text className="text-center text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                euismod, nisi vel consectetur interdum.
-              </Text>
-              <Container className="text-center my-4">
-                <Link
-                  href="#"
-                  className="bg-secondary text-white font-bold py-2 px-4 rounded"
-                >
-                  Learn more
-                </Link>
+            <Section className="my-6">
+              <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
+                <Container className="flex flex-col w-full justify-start items-center">
+                  <Img
+                    src={`${baseUrl}/static/2.png`}
+                    width="220"
+                    height="auto"
+                    alt="screenshot of the instructly app showing a students profile, payments and lessons"
+                    className="mb-1"
+                  />
+                </Container>
+                <Text className="font-semibold text-xl text-primary px-6 text-center">
+                  Quick access to message/call your student, track Cash/Stripe
+                  payments, and lessons with notes!
+                </Text>
               </Container>
-            </Section>
-
-            <Section className="mt-8 text-center">
-              <Text className="text-lg font-bold text-gray-800">Features</Text>
-              <Container className="flex justify-around my-4">
-                {/* <div>
+              <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
+                <Container className="flex flex-col w-full justify-start items-center">
                   <Img
-                    src={`${baseUrl}/static/light-icon.png`}
-                    width="40"
-                    height="40"
-                    alt="Light Intensity"
+                    src={`${baseUrl}/static/3.png`}
+                    width="220"
+                    height="auto"
+                    alt="screenshot of the instructly app showing option to export payments and expenses"
+                    className="mb-1"
                   />
-                  <Text className="text-sm text-gray-600">Light Intensity</Text>
-                </div> */}
-                <div>
+                </Container>
+                <Text className="font-semibold text-xl text-primary px-6 text-center">
+                  Export payments and expenses to a spreadsheet, with images of
+                  receipts - your accountant will thank you!
+                </Text>
+              </Container>
+              <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
+                <Container className="flex flex-col w-full justify-start items-center">
                   <Img
-                    src={`${baseUrl}/static/logo.png`}
-                    width="40"
-                    height="40"
-                    alt="Lights Groups"
+                    src={`${baseUrl}/static/4.png`}
+                    width="220"
+                    height="auto"
+                    alt="screenshot of the instructly app options to add a lesson"
+                    className="mb-1"
                   />
-                  <Text className="text-sm text-gray-600">Lights Groups</Text>
-                </div>
-                <div>
-                  <Img
-                    src={`${baseUrl}/static/logo.png`}
-                    width="40"
-                    height="40"
-                    alt="Eco Mode"
-                  />
-                  <Text className="text-sm text-gray-600">Eco Mode</Text>
-                </div>
+                </Container>
+                <Text className="font-semibold text-xl text-primary px-6 text-center">
+                  Unclutter your diary and notebooks by tracking lessons in the
+                  app, and in your phone's calendar!
+                </Text>
+              </Container>
+              <Container className="w-full flex flex-col justify-center items-center mt-4 py-6 px-4">
+                <Text className="text-3xl font-semibold text-primary text-center">
+                  See more demos on Facebook
+                </Text>
+                <Container className="w-full flex flex-col justify-center items-center">
+                  <Link href="https://www.facebook.com/instructlyapp">
+                    <Img
+                      src={`${baseUrl}/static/facebook.png`}
+                      width="130"
+                      height="auto"
+                      alt="link to the instructly facebook"
+                    />
+                  </Link>
+                </Container>
+              </Container>
+              <Container className="w-full bg-primary flex flex-col justify-center items-center mt-4 py-6 px-4">
+                <Text className="text-4xl font-bold text-white">
+                  Any Questions?
+                </Text>
+                <Text className="text-2xl font-medium text-white">
+                  Drop us an email: instructlyapp@gmail.com
+                </Text>
               </Container>
             </Section>
           </Container>
