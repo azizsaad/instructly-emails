@@ -136,7 +136,10 @@ const ResponsiveEmail = () => {
               </td>
             </tr>
             <tr>
-              <td align="center" style={{ padding: "20px" }}>
+              <td
+                align="center"
+                style={{ paddingTop: "20px", paddingBottom: "5px" }}
+              >
                 <Link href="https://apps.apple.com/gb/app/instructly/id6532619801">
                   <Img
                     src={getImageSrc("app-store.png")}
@@ -148,7 +151,7 @@ const ResponsiveEmail = () => {
               </td>
             </tr>
             <tr>
-              <td align="center" style={{ padding: "20px" }}>
+              <td align="center" style={{ paddingBottom: "20px" }}>
                 <Link href="https://play.google.com/store/apps/details?id=com.saadaziz.instructly">
                   <Img
                     src={getImageSrc("google-play.png")}
