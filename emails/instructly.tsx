@@ -107,9 +107,11 @@ const ResponsiveEmail = () => {
                   </Link>
                 </Container>
                 <Container className="w-full bg-primary flex flex-col justify-center items-center mt-4">
-                  <Text className="text-4xl font-bold text-white py-2 text-center">
-                    Download Free Today!
-                  </Text>
+                  <Container className="w-full bg-primary flex flex-col justify-center items-center">
+                    <Text className="text-4xl font-bold text-white py-2 text-center">
+                      Download Free Today!
+                    </Text>
+                  </Container>
                 </Container>
               </Container>
             </Section>
@@ -178,7 +180,12 @@ const ResponsiveEmail = () => {
                 <Text className="text-4xl font-bold text-white">
                   Any Questions?
                 </Text>
-                <Text className="text-2xl font-medium text-white">
+                <Text
+                  style={{
+                    textDecoration: "none",
+                  }}
+                  className="text-2xl font-medium text-white"
+                >
                   Drop us an email: instructlyapp@gmail.com
                 </Text>
               </Container>
