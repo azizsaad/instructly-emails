@@ -12,7 +12,8 @@ import {
   Font,
 } from "@react-email/components";
 
-const baseUrl = "https://saadaziz.co.uk/images/";
+const baseUrl =
+  "https://firebasestorage.googleapis.com/v0/b/instructai-server-e8aa9.appspot.com/o/";
 
 const ResponsiveEmail = () => {
   return (
@@ -48,7 +49,7 @@ const ResponsiveEmail = () => {
           <Container className="border border-solid border-gray-200 rounded mx-auto w-full max-w-xl bg-white">
             <Section className="bg-primary h-36">
               <Img
-                src={`${baseUrl}/static/logo.png`}
+                src={`${baseUrl}/static/logo.png${`?alt=media`}`}
                 width="320"
                 height="auto"
                 alt="instructly logo"
@@ -59,7 +60,7 @@ const ResponsiveEmail = () => {
               <Container className="text-center flex flex-col justify-start items-center pt-6 w-full">
                 <Container className="w-full flex flex-row justify-center pb-4">
                   <Img
-                    src={`${baseUrl}/static/1.png`}
+                    src={`${baseUrl}/static/1.png${`?alt=media`}`}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app showing many lessons plannes for the week"
@@ -86,7 +87,7 @@ const ResponsiveEmail = () => {
                     className="mx-2"
                   >
                     <Img
-                      src={`${baseUrl}/static/app-store.png`}
+                      src={`${baseUrl}/static/app-store.png${`?alt=media`}`}
                       width="200"
                       height="auto"
                       alt="Download on App Store"
@@ -97,7 +98,7 @@ const ResponsiveEmail = () => {
                     className="mx-2"
                   >
                     <Img
-                      src={`${baseUrl}/static/google-play.png`}
+                      src={`${baseUrl}/static/google-play.png${`?alt=media`}`}
                       width="200"
                       height="auto"
                       alt="Get it on Google Play"
@@ -117,7 +118,7 @@ const ResponsiveEmail = () => {
               <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
                 <Container className="flex flex-col w-full justify-start items-center">
                   <Img
-                    src={`${baseUrl}/static/2.png`}
+                    src={`${baseUrl}/static/2.png${`?alt=media`}`}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app showing a students profile, payments and lessons"
@@ -132,7 +133,7 @@ const ResponsiveEmail = () => {
               <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
                 <Container className="flex flex-col w-full justify-start items-center">
                   <Img
-                    src={`${baseUrl}/static/3.png`}
+                    src={`${baseUrl}/static/3.png${`?alt=media`}`}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app showing option to export payments and expenses"
@@ -147,7 +148,7 @@ const ResponsiveEmail = () => {
               <Container className="flex flex-col w-full justify-start items-center pt-4 pb-8">
                 <Container className="flex flex-col w-full justify-start items-center">
                   <Img
-                    src={`${baseUrl}/static/4.png`}
+                    src={`${baseUrl}/static/4.png${`?alt=media`}`}
                     width="220"
                     height="auto"
                     alt="screenshot of the instructly app options to add a lesson"
@@ -166,7 +167,7 @@ const ResponsiveEmail = () => {
                 <Container className="w-full flex flex-col justify-center items-center">
                   <Link href="https://www.facebook.com/instructlyapp">
                     <Img
-                      src={`${baseUrl}/static/facebook.png`}
+                      src={`${baseUrl}/static/facebook.png${`?alt=media`}`}
                       width="130"
                       height="auto"
                       alt="link to the instructly facebook"
